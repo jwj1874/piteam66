@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:background="#F4F4E1">
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KU Embedded System Controller"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:textColor="#000000"/>
+
+    <!-- 센서 데이터 (온도, 습도, 거리) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="온도:"
+            android:textSize="18sp"
+            android:paddingEnd="32dp"/>
+
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="습도:"
+            android:textSize="18sp"
+            android:paddingEnd="32dp"/>
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="거리:"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- 모드 -->
+    <TextView
+        android:id="@+id/modeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode: "
+        android:textSize="18sp"
+        android:textColor="#FF0000"
+        android:paddingBottom="16dp"/>
+
+    <!-- 장치 상태 및 제어 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center_horizontal">
+
+        <!-- Heater -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/heaterStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="heater: "
+                android:textSize="16sp"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/turnOnButton_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ON"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#00FF00"
+                    android:padding="16dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/turnOffButton_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6347"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- AC -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/acStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AC:"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/turnOnButton_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ON"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#00FF00"
+                    android:padding="16dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/turnOffButton_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6347"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Dehumidifier -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/dehumidifierStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dehumidifier:"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/turnOnButton_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ON"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#00FF00"
+                    android:padding="16dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp" />
+
+                <Button
+                    android:id="@+id/turnOffButton_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OFF"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6347"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
